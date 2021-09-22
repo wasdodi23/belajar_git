@@ -1,0 +1,86 @@
+1. Instalasi:
+   > Registrasi github di https://github.com
+   > Download & install Git local https://git-scm.com/downloads
+2. Konfigutasi git local dengan bash shell
+   > git --version //melihat versi git
+	"name" & "email" pastikan sama dengan akun di github agar memudahkan dalam belajar
+   > git config --global user.name "user_name"
+   > git config --global user.mail "user_name@gmail.com"
+   > git config --list //melihat hasil konfigurasi
+3. Memulai project dengan git sebagai repo dan menambahkan file 
+   > Create folder 
+   > Klik kanan folder
+   > git bash here
+   > git //melihat perintah2 git
+   > git init //membuat inisialisasi folder sebagai repo
+   > git add . //menambahkan perubahan pada semua folder tsb
+   > create test_file.txt
+   > git commit -m "first init" //deskripsi apa yg telah kita lakukan
+   > edit konten test_file.txt
+   > git add .
+   > git commit -m "mengubah isi file test_file"
+4. Melihat commit history
+   > git log //melihat informasi / hostori dari suatu commit
+   > git log -n 1 //menampilkan 1 commit terakhir
+   > git log --since=yyyy-mm-dd //menampilkan commit berdasarkan tanggal sejak kapan melakukan perubahan
+   > git log --until=yyyy-mm-dd //menampilkan commit berdasarkan tanggal sebelum kapan melakukan perubahan
+   > git log --author="username" //menampilkan commit berdasarkan author
+   > git log --grep="init" //meanmpilkan commit dengan kata init (berdasarkan judul)
+5. cara kerja git dengan perintah git status
+   > open folder project
+   > git status //menampilkan informasi status perubahan dari working tree project 
+   > create new file test_file2.txt
+   > create new file test_file3.txt
+   > git status
+   > git add test_file2.txt //menambahkan file ke dalam staging
+   > git commit -m "menambahkan test_file2.txt ke stating"
+   > git status
+6. melihat perubahan pada suatu project
+   > open project with code editor
+   > create new file
+   > git status
+   > git diff //melihat kondisi sebelumnya dan kondisi terbaru
+   > git diff filename //melihat perubahan pada file tertentu
+7. melihat perubahan pada staging
+   > git diff //menampilkan file hanya pada working file
+   > git diff --staged //melihat perubahan file pada stage
+   > git commit -m "perubahan pada file 1&2"
+   > git status
+8. menghapus file pada git
+   > create new file_del.txt
+   > git add . //memasukan semua file dari working ke staging
+   > delete file_del.txt via direktori atau bisa juga
+   > git rm file_del.txt //menghapus file skaligus perubahan tercatat dan bisa di track
+   > git status
+   > git add file_del.txt
+   > git status
+   > git commit -m "file_del.txt dihapus"
+   > git status
+   > git mv namafile //merubah nama file/memindahkannya
+   > git commit -m "merubah namafile"
+   > git status
+9. membatalkan suatu revisi atau perubahan pada git
+   > git reset namafile //mengembalikan perubahan
+   > git checkout log_commit namafile //membatalkan perubahan pada suatu file dalam kondisi commited
+   > git revert -n hash //
+10. membuat percabangan (branch)
+   > git branch namabranch
+   > git branch //melihat branch yg aktif
+   > git checkout namabranch//berpindah ke branch dari master
+   > git add namafile //file yang akan kita tambahkan ke branch
+   > git commint -m "membuat file baru"
+   > git checkout master //kembali ke jalur master
+   > git merge namabranch //menggabungkan branch ke master
+   > apabila terjadi konflik maka ubah isi file secara manual dan pilih isi file yg valid dari master
+   > git branch -d namabranch
+   > git branch
+11. remote repository
+   > git remote //masuk mode remote
+   > git remote add origin url
+   > git remote -v //melihat remote apa aja yg udah ditambahkan
+   > git remote
+   > git push -v origin master //upload file dari git local to github
+   > git fetch //mengambil revisi dari repository remote yang hanya akan mengambil commit saja dan tidak langsung melakukan merge terhadap repository local
+   > git fetch origin master
+   > git pull origin master //mengambil perubahan pada remote repository
+   > git clone url

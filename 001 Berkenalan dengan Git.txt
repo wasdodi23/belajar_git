@@ -1,0 +1,46 @@
+Apa itu Git?
+Git adalah sebuah Verison Control System terdistribusi untuk mengelola file di dalam folder (repository)
+
+Apa itu Verison Control System (VCS)?
+VCS atau Source Code Management adalah sistem yang mengelola perubahan dari sebuah dokumen/file, Aplikasi, website dan kumpulan informasi lain
+
+Kenapa menggunakan VCS?
+Fungsi VCS:
+> Sebuah sistem yang menyimpan 'record/snapshot' perubahan pada source code
+> Bekerja dalam kolaborasi lebih baik dan efektif
+> Sebagai auditor sistem dalam perubahan dokumen/file
+> Memungkinkan dokumen/file kembali dalam kondisi yang di inginkan dari sebuah riwayat yang tersimpan
+
+Kenapa menggunakan Git/Github?
+Git adalah software opensource yang populer dan mudah digunakan dan sangat membantu dalam pembuatan project baik secara team ataupun perorangan
+
+Perbedanaan Git dan Github
+Git VCS yang berbasis Local
+Github VCS yang berbasis Clouds
+
+Lebih detail dengan git/github, silahkan kunjungi
+https://id.wikipedia.org/wiki/Git
+https://github.com
+https://git-scm.com
+
+Istilah-istilah dasar pada Git:
+1. Repo : folder/directory project
+2. Commit : record/snapshot dari repo
+3. Hash : penanda yang bersifat unik pada suatu commit
+4. Checkout : berpindah ke sebuah commit melalui hash
+5. Branch : cabang yang bersifat secondary dari sebuah commit
+6. Merge : penggabungan dari suatu branch
+7. Remote : sumber dari suatu repo
+8. Clone : mengambil repo dari remote
+9. Pull : mengambil commit dari suatu repo
+10. Push : mengirim commit daru suatu repo
+
+Branching/percabangan
+Fungsi Branch:
+> Membuat jalur/cabang baru
+> Membuat record/snapshot tanpa menggangu jalur utama/master
+> Fitur experimental
+> Dapat mengerjakan repo secara bersamaan
+
+Arsitektur pada git (three-three architecture)
+Working Space -> Staging Index -> Repository
